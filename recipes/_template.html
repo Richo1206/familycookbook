@@ -22,8 +22,10 @@
 
   Optional bits:
     * Italic subtitle below the title - delete the <p> if not needed.
-    * Base column on the ingredients table - delete the Base <th>
-      and the first <td class="qty"> on each row if you don't scale.
+    * Ingredient scaling columns - the default below is a single
+      quantity column. If a recipe needs scaling (e.g. Gran's
+      Tomato Relish uses Base + 1.5x), add a <thead> with the
+      extra column headers and an extra <td class="qty"> per row.
     * Notes panel - delete the whole <aside class="notes-panel"> if
       a recipe doesn't need handwriting space.
 -->
@@ -50,7 +52,7 @@
     "name": "Recipe Name",
     "description": "Short description for search engines.",
     "recipeYield": "Approx N servings",
-    "recipeCategory": "Mains / Preserves / Dessert / etc",
+    "recipeCategory": "Mains / Soups / Sides / Sauces & Dressings / Preserves / Desserts",
     "image": "../assets/recipes-photos/PLACEHOLDER.jpg",
     "author": { "@type": "Organization", "name": "Richardson Family" },
     "recipeIngredient": [
@@ -80,11 +82,11 @@
           <ul class="nav-dropdown-menu" role="menu">
             <li role="none"><a role="menuitem" href="../recipes/ming-ling.html">Ali&apos;s Ming Ling <span class="menu-meta">Mains</span></a></li>
             <li role="none"><a role="menuitem" href="../recipes/yorkies.html">Amazing Yorkies <span class="menu-meta">Sides</span></a></li>
+            <li role="none"><a role="menuitem" href="../recipes/chocolate-cake.html">Chocolate Cake <span class="menu-meta">Desserts</span></a></li>
             <li role="none"><a role="menuitem" href="../recipes/grans-mayo.html">Gran&apos;s Mayo <span class="menu-meta">Sauces &amp; Dressings</span></a></li>
             <li role="none"><a role="menuitem" href="../recipes/tomato-relish-2024.html">Gran&apos;s Tomato Relish <span class="menu-meta">Preserves</span></a></li>
-            <li role="none"><a role="menuitem" href="../recipes/pea-and-ham.html">Pea &amp; Ham Soup <span class="menu-meta">Soup</span></a></li>
-            <li role="none"><a role="menuitem" href="../recipes/apple-cake.html">Spiced Apple Cake <span class="menu-meta">Dessert</span></a></li>
-            <li role="none"><a role="menuitem" href="../recipes/chocolate-cake.html">Chocolate Cake <span class="menu-meta">Dessert</span></a></li>
+            <li role="none"><a role="menuitem" href="../recipes/pea-and-ham.html">Pea &amp; Ham Soup <span class="menu-meta">Soups</span></a></li>
+            <li role="none"><a role="menuitem" href="../recipes/apple-cake.html">Spiced Apple Cake <span class="menu-meta">Desserts</span></a></li>
           </ul>
         </div>
         <button class="nav-link nav-print" type="button" onclick="window.print()">Print page</button>
@@ -120,22 +122,14 @@
 
         <table class="ingredients-table">
           <caption class="visually-hidden">Recipe ingredients</caption>
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col" class="qty">Base</th>
-              <th scope="col" class="qty">1.5x</th>
-              <th scope="col" class="qty">2x</th>
-            </tr>
-          </thead>
           <tbody>
             <!-- TEMPLATE: replace these rows. Add <tr class="divider"> to draw a thin separator line before a row. -->
-            <tr><th scope="row">Ingredient one</th><td class="qty">1&nbsp;cup</td><td class="qty">1&frac12;&nbsp;cups</td><td class="qty">2&nbsp;cups</td></tr>
-            <tr><th scope="row">Ingredient two</th><td class="qty">2&nbsp;tbsp</td><td class="qty">3&nbsp;tbsp</td><td class="qty">4&nbsp;tbsp</td></tr>
-            <tr><th scope="row">Ingredient three</th><td class="qty">100&nbsp;g</td><td class="qty">150&nbsp;g</td><td class="qty">200&nbsp;g</td></tr>
+            <tr><th scope="row">Ingredient one</th><td class="qty">1&nbsp;cup</td></tr>
+            <tr><th scope="row">Ingredient two</th><td class="qty">2&nbsp;tbsp</td></tr>
+            <tr><th scope="row">Ingredient three</th><td class="qty">100&nbsp;g</td></tr>
 
-            <tr class="divider"><th scope="row">Ingredient four</th><td class="qty">1&nbsp;tsp</td><td class="qty">heaped tsp</td><td class="qty">2&nbsp;tsp</td></tr>
-            <tr><th scope="row">Ingredient five</th><td class="qty">1&nbsp;tsp</td><td class="qty">1&frac12;&nbsp;tsp</td><td class="qty">2&nbsp;tsp</td></tr>
+            <tr class="divider"><th scope="row">Ingredient four</th><td class="qty">1&nbsp;tsp</td></tr>
+            <tr><th scope="row">Ingredient five</th><td class="qty">1&nbsp;tsp</td></tr>
           </tbody>
         </table>
       </section>

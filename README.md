@@ -62,7 +62,7 @@ For each new recipe, the assistant should:
    - Photo `<img src>` and `alt`
    - Method `<ol>` steps
 4. **Drop the photo** into `assets/recipes-photos/` named to match the slug (e.g. `pea-and-ham.png`). Rename if it arrives with spaces or capitals.
-5. **Wire the new recipe into the Recipes dropdown menu** - the dropdown lives inside every HTML file (index.html, recipe-index.html, _template.html, and every existing recipe page). Add an `<li>` with `<a role="menuitem" href="..." >Recipe Name <span class="menu-meta">Category</span></a>` to ALL of them in alphabetical order.
+5. **Wire the new recipe into the Recipes dropdown menu** - the dropdown lives inside every HTML file (all 10 of them: index.html, recipe-index.html, _template.html, and every existing recipe page). Add an `<li>` with `<a role="menuitem" href="..." >Recipe Name <span class="menu-meta">Category</span></a>` to ALL of them in alphabetical order. Category labels in the dropdown are plural to match the Index page (e.g. "Desserts", "Soups").
 6. **Add to `recipe-index.html`** under the appropriate category section. If the category doesn't exist yet, add a new `<section class="index-category">` block. Format:
    ```html
    <li>
@@ -117,7 +117,7 @@ To see deployment history with commit messages: https://github.com/Richo1206/fam
 - **Cover photo bottom corners**: clipped via CSS `clip-path: path(...)` using hardcoded pixel coordinates matching the A4 inner page-frame curve.
 - **Favicon**: `assets/images/favicon-32.png`, `favicon-192.png`, `favicon.ico` are linked in every page's `<head>`.
 - **Logo**: `assets/images/logo.png` (R F C monogram with olive sprigs, transparent background).
-- **Dropdown menu**: HTML lives in all 9 HTML files - editing one is not enough, all need updating. Sort alphabetically.
+- **Dropdown menu**: HTML lives in all 10 HTML files (index.html, recipe-index.html, _template.html, and every recipe in `recipes/`) - editing one is not enough, all need updating. Sort alphabetically by recipe name. Category labels are plural ("Desserts", "Soups", etc.) to match the Index page section names.
 
 ---
 

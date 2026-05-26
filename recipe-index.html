@@ -28,11 +28,11 @@
           <ul class="nav-dropdown-menu" role="menu">
             <li role="none"><a role="menuitem" href="recipes/ming-ling.html">Ali&apos;s Ming Ling <span class="menu-meta">Mains</span></a></li>
             <li role="none"><a role="menuitem" href="recipes/yorkies.html">Amazing Yorkies <span class="menu-meta">Sides</span></a></li>
+            <li role="none"><a role="menuitem" href="recipes/chocolate-cake.html">Chocolate Cake <span class="menu-meta">Desserts</span></a></li>
             <li role="none"><a role="menuitem" href="recipes/grans-mayo.html">Gran&apos;s Mayo <span class="menu-meta">Sauces &amp; Dressings</span></a></li>
             <li role="none"><a role="menuitem" href="recipes/tomato-relish-2024.html">Gran&apos;s Tomato Relish <span class="menu-meta">Preserves</span></a></li>
-            <li role="none"><a role="menuitem" href="recipes/pea-and-ham.html">Pea &amp; Ham Soup <span class="menu-meta">Soup</span></a></li>
-            <li role="none"><a role="menuitem" href="recipes/apple-cake.html">Spiced Apple Cake <span class="menu-meta">Dessert</span></a></li>
-            <li role="none"><a role="menuitem" href="recipes/chocolate-cake.html">Chocolate Cake <span class="menu-meta">Dessert</span></a></li>
+            <li role="none"><a role="menuitem" href="recipes/pea-and-ham.html">Pea &amp; Ham Soup <span class="menu-meta">Soups</span></a></li>
+            <li role="none"><a role="menuitem" href="recipes/apple-cake.html">Spiced Apple Cake <span class="menu-meta">Desserts</span></a></li>
           </ul>
         </div>
         <button class="nav-link nav-print" type="button" onclick="window.print()">Print page</button>
@@ -127,7 +127,7 @@
         <ul class="index-list">
           <li>
             <div>
-              <a href="recipes/tomato-relish-2024.html">Gran's Tomato Relish</a>
+              <a href="recipes/tomato-relish-2024.html">Gran&apos;s Tomato Relish</a>
             </div>
             <span class="index-yield">Credit: Janice Richardson</span>
           </li>
@@ -143,15 +143,15 @@
         <ul class="index-list">
           <li>
             <div>
-              <a href="recipes/apple-cake.html">Spiced Apple Cake</a>
-            </div>
-            <span class="index-yield">Credit: Richardson Family</span>
-          </li>
-          <li>
-            <div>
               <a href="recipes/chocolate-cake.html">Chocolate Cake</a>
             </div>
             <span class="index-yield">Credit: Alison Richardson</span>
+          </li>
+          <li>
+            <div>
+              <a href="recipes/apple-cake.html">Spiced Apple Cake</a>
+            </div>
+            <span class="index-yield">Credit: Richardson Family</span>
           </li>
         </ul>
       </section>
@@ -161,9 +161,28 @@
       <span>Generations of family favourites</span>
       <img class="footer-sprig right" src="assets/images/section-sprig-right.png" alt="" aria-hidden="true">
     </footer>
+  </main>
 
-
-
-</main>
-
-  <scrip
+  <script>
+    (function () {
+      var ddRoots = document.querySelectorAll('[data-dropdown]');
+      ddRoots.forEach(function (dd) {
+        var btn = dd.querySelector('.nav-dropdown-toggle');
+        if (!btn) return;
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var open = dd.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      });
+      document.addEventListener('click', function () {
+        ddRoots.forEach(function (dd) {
+          dd.classList.remove('open');
+          var btn = dd.querySelector('.nav-dropdown-toggle');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
