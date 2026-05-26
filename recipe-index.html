@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3ebd9">
+  <meta name="description" content="Index of recipes in the Richardson Family Cookbook, grouped by category.">
+  <title>Index &middot; Richardson Family Cookbook</title>
+  <link rel="stylesheet" href="assets/css/cookbook.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon-192.png">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="site-nav-inner">
+      <a class="site-nav-brand" href="index.html" aria-label="Richardson Family Cookbook home">
+        <img class="nav-logo" src="assets/images/logo.png" alt="Richardson Family Cookbook">
+      </a>
+      <div class="site-nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="recipe-index.html">Index</a>
+        <div class="nav-dropdown" data-dropdown>
+          <button class="nav-link nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            Recipes <span class="caret" aria-hidden="true">&#9662;</span>
+          </button>
+          <ul class="nav-dropdown-menu" role="menu">
+            <li role="none"><a role="menuitem" href="recipes/tomato-relish-2024.html">Gran&apos;s Tomato Relish <span class="menu-meta">Preserves</span></a></li>
+            <li role="none"><a role="menuitem" href="recipes/chocolate-cake.html">Chocolate Cake <span class="menu-meta">Dessert</span></a></li>
+          </ul>
+        </div>
+        <button class="nav-link nav-print" type="button" onclick="window.print()">Print page</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="cover">
+    <div class="page-frame" aria-hidden="true"></div>
+
+    <div class="index-page">
+      <header class="index-header">
+        <h1 class="index-title">Index</h1>
+        <p class="index-lead">Every recipe in the Richardson Family Cookbook, grouped by category.</p>
+        <div class="heart-rule" aria-hidden="true" style="margin-top: 6mm;">
+          <span class="dot"></span>
+          <svg class="heart-glyph" width="24" height="22" viewBox="0 0 24 22" aria-hidden="true"><path d="M12 21.2 C 4.5 16, 1 11.5, 1 7 A 5.5 5.5 0 0 1 12 6.2 A 5.5 5.5 0 0 1 23 7 C 23 11.5, 19.5 16, 12 21.2 Z" fill="currentColor"/></svg>
+          <span class="dot"></span>
+        </div>
+      </header>
+
+      <section class="index-category">
+        <h2 class="index-category-heading">
+          <img class="mini-olive flip" src="assets/images/section-sprig-left.png" alt="" aria-hidden="true">
+          Preserves
+          <img class="mini-olive" src="assets/images/section-sprig-right.png" alt="" aria-hidden="true">
+        </h2>
+        <ul class="index-list">
+          <li>
+            <div>
+              <a href="recipes/tomato-relish-2024.html">Gran's Tomato Relish</a>
+              <span class="index-desc">A traditional tomato relish - moulee after cooking instead of skinning the tomatoes.</span>
+            </div>
+            <span class="index-yield">Makes approx 12 medium bottles</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="index-category">
+        <h2 class="index-category-heading">
+          <img class="mini-olive flip" src="assets/images/section-sprig-left.png" alt="" aria-hidden="true">
+          Desserts
+          <img class="mini-olive" src="assets/images/section-sprig-right.png" alt="" aria-hidden="true">
+        </h2>
+        <ul class="index-list">
+          <li>
+            <div>
+              <a href="recipes/chocolate-cake.html">Chocolate Cake</a>
+              <span class="index-desc">A rich, easy chocolate cake topped with fluffy cocoa frosting. Bakes in a 19&nbsp;cm square pan.</span>
+            </div>
+            <span class="index-yield">1 cake (19&nbsp;cm sq pan)</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer class="page-footer">
+      <img class="footer-sprig left"  src="assets/images/section-sprig-left.png"  alt="" aria-hidden="true">
+      <span>Generations of family favourites</span>
+      <img class="footer-sprig right" src="assets/images/section-sprig-right.png" alt="" aria-hidden="true">
+    </footer>
+
+
+
+</main>
+
+  <script>
+    (function () {
+      var ddRoots = document.querySelectorAll('[data-dropdown]');
+      ddRoots.forEach(function (dd) {
+        var btn = dd.querySelector('.nav-dropdown-toggle');
+        if (!btn) return;
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var open = dd.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      });
+      document.addEventListener('click', function () {
+        ddRoots.forEach(function (dd) {
+          dd.classList.remove('open');
+          var btn = dd.querySelector('.nav-dropdown-toggle');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

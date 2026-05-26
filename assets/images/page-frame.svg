@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" preserveAspectRatio="none">
+  <!-- Double border with concave corners, darker for better visibility -->
+  <path d="M 11 5 L 199 5 A 6 6 0 0 0 205 11 L 205 286 A 6 6 0 0 0 199 292 L 11 292 A 6 6 0 0 0 5 286 L 5 11 A 6 6 0 0 0 11 5 Z"
+        fill="none" stroke="#6e7a3f" stroke-width="0.45" stroke-opacity="0.85"/>
+  <path d="M 13 7 L 197 7 A 6 6 0 0 0 203 13 L 203 284 A 6 6 0 0 0 197 290 L 13 290 A 6 6 0 0 0 7 284 L 7 13 A 6 6 0 0 0 13 7 Z"
+        fill="none" stroke="#8b985b" stroke-width="0.32" stroke-opacity="0.8"/>
+</svg>

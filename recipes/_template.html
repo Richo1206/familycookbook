@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+  RICHARDSON FAMILY COOKBOOK - Recipe page template
+  ===================================================
+  Copy this file to recipes/<your-recipe-slug>.html, then replace
+  every TEMPLATE marker below with your recipe content. The
+  structural shell (nav, page frame, sprigs, footer) is identical
+  to the working recipe so the layout stays consistent.
+
+  Don't forget:
+    * Drop your recipe photo into assets/recipes-photos/ and update
+      the <img src> below.
+    * Add the new recipe to TWO places:
+        1) The Recipes dropdown menu (<ul class="nav-dropdown-menu">)
+           lives inside every HTML file (index.html, recipe-index.html,
+           recipes/_template.html, and every existing recipe page).
+           Add an <li> with a link to your new file in ALL of them so
+           the dropdown stays in sync site-wide.
+        2) recipe-index.html - add a row under the appropriate
+           category (or create a new category section) so the recipe
+           appears on the Index page.
+
+  Optional bits:
+    * Italic subtitle below the title - delete the <p> if not needed.
+    * Base column on the ingredients table - delete the Base <th>
+      and the first <td class="qty"> on each row if you don't scale.
+    * Notes panel - delete the whole <aside class="notes-panel"> if
+      a recipe doesn't need handwriting space.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3ebd9">
+  <!-- TEMPLATE: replace with a short summary for search engines -->
+  <meta name="description" content="A Richardson family recipe.">
+  <!-- TEMPLATE: browser tab title -->
+  <title>Recipe Name &middot; Richardson Family Cookbook</title>
+  <link rel="stylesheet" href="../assets/css/cookbook.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/favicon-192.png">
+  <link rel="apple-touch-icon" href="../assets/images/favicon-192.png">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+  <!-- TEMPLATE: Schema.org Recipe data for SEO. Edit name/ingredients/steps. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    "name": "Recipe Name",
+    "description": "Short description for search engines.",
+    "recipeYield": "Approx N servings",
+    "recipeCategory": "Mains / Preserves / Dessert / etc",
+    "image": "../assets/recipes-photos/PLACEHOLDER.jpg",
+    "author": { "@type": "Organization", "name": "Richardson Family" },
+    "recipeIngredient": [
+      "TEMPLATE ingredient 1",
+      "TEMPLATE ingredient 2"
+    ],
+    "recipeInstructions": [
+      { "@type": "HowToStep", "text": "TEMPLATE step 1" },
+      { "@type": "HowToStep", "text": "TEMPLATE step 2" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="site-nav-inner">
+      <a class="site-nav-brand" href="../index.html" aria-label="Richardson Family Cookbook home">
+        <img class="nav-logo" src="../assets/images/logo.png" alt="Richardson Family Cookbook">
+      </a>
+      <div class="site-nav-links">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../recipe-index.html">Index</a>
+        <div class="nav-dropdown" data-dropdown>
+          <button class="nav-link nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            Recipes <span class="caret" aria-hidden="true">&#9662;</span>
+          </button>
+          <ul class="nav-dropdown-menu" role="menu">
+            <li role="none"><a role="menuitem" href="../recipes/tomato-relish-2024.html">Gran&apos;s Tomato Relish <span class="menu-meta">Preserves</span></a></li>
+            <li role="none"><a role="menuitem" href="../recipes/chocolate-cake.html">Chocolate Cake <span class="menu-meta">Dessert</span></a></li>
+          </ul>
+        </div>
+        <button class="nav-link nav-print" type="button" onclick="window.print()">Print page</button>
+      </div>
+    </div>
+  </nav>
+
+  <article class="page" role="article" aria-labelledby="recipe-title">
+    <div class="page-frame" aria-hidden="true"></div>
+
+    <header class="title-block">
+      <img class="olive left"  src="../assets/images/olive-sprig-left.png"  alt="" aria-hidden="true">
+      <img class="olive right" src="../assets/images/olive-sprig-right.png" alt="" aria-hidden="true">
+      <!-- TEMPLATE: recipe title (all caps recommended) -->
+      <h1 id="recipe-title" class="recipe-title">RECIPE NAME</h1>
+      <div class="heart-rule" aria-hidden="true">
+        <span class="dot"></span>
+        <svg class="heart-glyph" width="24" height="22" viewBox="0 0 24 22" aria-hidden="true"><path d="M12 21.2 C 4.5 16, 1 11.5, 1 7 A 5.5 5.5 0 0 1 12 6.2 A 5.5 5.5 0 0 1 23 7 C 23 11.5, 19.5 16, 12 21.2 Z" fill="currentColor"/></svg>
+        <span class="dot"></span>
+      </div>
+      <!-- TEMPLATE: yield text (or delete this <p> entirely if not needed) -->
+      <p class="recipe-subtitle"><em>Makes approx N servings</em></p>
+    </header>
+
+    <div class="recipe-grid">
+      <section aria-labelledby="ing-h">
+        <h2 id="ing-h" class="section-header">
+          <img class="mini-olive flip" src="../assets/images/section-sprig-left.png" alt="" aria-hidden="true">
+          Ingredients
+          <img class="mini-olive" src="../assets/images/section-sprig-right.png" alt="" aria-hidden="true">
+        </h2>
+        <div class="section-rule" aria-hidden="true"><span class="dot"></span></div>
+
+        <table class="ingredients-table">
+          <caption class="visually-hidden">Recipe ingredients</caption>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="qty">Base</th>
+              <th scope="col" class="qty">1.5x</th>
+              <th scope="col" class="qty">2x</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- TEMPLATE: replace these rows. Add <tr class="divider"> to draw a thin separator line before a row. -->
+            <tr><th scope="row">Ingredient one</th><td class="qty">1&nbsp;cup</td><td class="qty">1&frac12;&nbsp;cups</td><td class="qty">2&nbsp;cups</td></tr>
+            <tr><th scope="row">Ingredient two</th><td class="qty">2&nbsp;tbsp</td><td class="qty">3&nbsp;tbsp</td><td class="qty">4&nbsp;tbsp</td></tr>
+            <tr><th scope="row">Ingredient three</th><td class="qty">100&nbsp;g</td><td class="qty">150&nbsp;g</td><td class="qty">200&nbsp;g</td></tr>
+
+            <tr class="divider"><th scope="row">Ingredient four</th><td class="qty">1&nbsp;tsp</td><td class="qty">heaped tsp</td><td class="qty">2&nbsp;tsp</td></tr>
+            <tr><th scope="row">Ingredient five</th><td class="qty">1&nbsp;tsp</td><td class="qty">1&frac12;&nbsp;tsp</td><td class="qty">2&nbsp;tsp</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- TEMPLATE: replace src with your recipe photo (drop file into ../assets/recipes-photos/) -->
+      <figure class="recipe-photo">
+        <img src="../assets/recipes-photos/PLACEHOLDER.jpg" alt="TEMPLATE: short description of the photo">
+      </figure>
+    </div>
+
+    <div class="recipe-grid recipe-grid-bottom">
+      <section aria-labelledby="meth-h">
+        <h2 id="meth-h" class="section-header">
+          <img class="mini-olive flip" src="../assets/images/section-sprig-left.png" alt="" aria-hidden="true">
+          Method
+          <img class="mini-olive" src="../assets/images/section-sprig-right.png" alt="" aria-hidden="true">
+        </h2>
+        <div class="section-rule" aria-hidden="true"><span class="dot"></span></div>
+
+        <ol class="method-list">
+          <!-- TEMPLATE: replace these steps. One sentence per <li> is ideal. -->
+          <li>First step description.</li>
+          <li>Second step.</li>
+          <li>Third step.</li>
+          <li>Fourth step.</li>
+          <li>Fifth step.</li>
+        </ol>
+      </section>
+
+      <aside class="notes-panel" aria-labelledby="notes-h">
+        <h2 id="notes-h" class="section-header">
+          <img class="mini-olive flip" src="../assets/images/section-sprig-left.png" alt="" aria-hidden="true">
+          Notes
+          <img class="mini-olive" src="../assets/images/section-sprig-right.png" alt="" aria-hidden="true">
+        </h2>
+        <div class="section-rule" aria-hidden="true"><span class="dot"></span></div>
+        <span class="notes-lines" aria-hidden="true"></span>
+      </aside>
+    </div>
+
+    <footer class="page-footer">
+      <img class="footer-sprig left"  src="../assets/images/section-sprig-left.png"  alt="" aria-hidden="true">
+      <span>Generations of family favourites</span>
+      <img class="footer-sprig right" src="../assets/images/section-sprig-right.png" alt="" aria-hidden="true">
+    </footer>
+
+  </article>
+
+  <script>
+    (function () {
+      var ddRoots = document.querySelectorAll('[data-dropdown]');
+      ddRoots.forEach(function (dd) {
+        var btn = dd.querySelector('.nav-dropdown-toggle');
+        if (!btn) return;
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var o

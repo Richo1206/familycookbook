@@ -1,0 +1,22 @@
+# Working / source files - not part of the published site
+Examples/
+Graphics/
+Logo.png
+Logo*.png
+favicon.png
+favicon-source*
+font-preview.html
+ChatGPT*
+
+# iCloud / OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.icloud
+
+# Editor temp files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
