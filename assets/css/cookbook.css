@@ -316,7 +316,7 @@ a:hover { border-bottom-color: var(--ink); }
      hardcoded desktop px) - flow the photo normally instead */
   .home-cover { padding-bottom: 24px; }
   .cover-title { transform: none; margin-top: 0; padding-top: 6px; }
-  .cover-arc { height: 30mm; max-width: 85%; }
+  .cover-arc { height: 22mm; max-width: 70%; }
   .family-script { font-size: 48px; }
   .cover-suffix { font-size: 22px; letter-spacing: 0.12em; margin-top: 4mm; }
   .cover-tagline { font-size: 14px; }
