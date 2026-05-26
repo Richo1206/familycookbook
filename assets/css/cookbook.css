@@ -312,19 +312,18 @@ a:hover { border-bottom-color: var(--ink); }
   .notes-lines { background-size: 100% 24px; background-image: linear-gradient(to bottom, transparent calc(24px - 1px), var(--ink-faint) calc(24px - 1px), var(--ink-faint) 24px, transparent 24px); min-height: 200px; }
   .page-footer { position: static; padding: 24px 0 4px; font-size: 14px; gap: 14px; }
   .page-footer .footer-sprig { width: 36px; }
-  /* Cover page on mobile: same proportions as desktop, just smaller container.
-     Use transform: scale on the title block so RICHARDSON / Family / COOKBOOK
-     keep their desktop relationship instead of being individually shrunk. */
+  /* Cover page on mobile: keep desktop proportions (RICHARDSON widest,
+     then Family, then COOKBOOK, then tagline) just at mobile-appropriate sizes. */
   .home-cover { padding-bottom: 24px; }
-  .cover-title { transform: scale(0.42); transform-origin: top center; margin-top: 0; padding-top: 4px; height: 95mm; }
-  .cover-arc { height: 50mm; max-width: 175mm; }
-  .script-wrap { gap: 14mm; margin: -22mm 0 -10mm; }
-  .script-wrap .olive { width: 42mm; transform: translateY(0); }
-  .family-script { font-size: 113pt; }
-  .cover-suffix { font-size: 50pt; letter-spacing: 0.15em; margin: 10mm 0 0; }
-  .cover-tagline-row { gap: 6mm; margin: 4mm 0 0; }
-  .cover-tagline-row .footer-sprig { width: 25mm; }
-  .cover-tagline-row .cover-tagline { font-size: 25pt; }
+  .cover-title { transform: none; margin-top: 0; padding-top: 6px; }
+  .cover-arc { height: 40mm; max-width: 95%; }
+  .script-wrap { gap: 4mm; margin: -10mm 0 -6mm; }
+  .script-wrap .olive { width: 26mm; transform: translateY(-3mm); }
+  .family-script { font-size: 64pt; }
+  .cover-suffix { font-size: 28pt; letter-spacing: 0.12em; margin: 5mm 0 0; }
+  .cover-tagline-row { gap: 4mm; margin: 4mm 0 0; flex-wrap: nowrap; }
+  .cover-tagline-row .footer-sprig { width: 14mm; }
+  .cover-tagline-row .cover-tagline { font-size: 13pt; white-space: nowrap; }
   .cover-photo {
     position: static;
     top: auto; left: auto; right: auto; bottom: auto;
@@ -352,4 +351,5 @@ a:hover { border-bottom-color: var(--ink); }
 /* Custom SVG heart glyph */
 .heart-glyph { display: inline-block; width: 1em; height: 0.92em; vertical-align: -0.15em; color: var(--ink); }
 .heart-rule .heart-glyph { width: 24px; height: 22px; }
-.site-nav-brand .heart-glyph { wi
+.site-nav-brand .heart-glyph { width: 11px; height: 10px; color: var(--ink-soft); }
+.page-footer .heart-glyph { width: 14px; hei
