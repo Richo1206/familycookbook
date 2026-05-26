@@ -316,7 +316,7 @@ a:hover { border-bottom-color: var(--ink); }
      hardcoded desktop px) - flow the photo normally instead */
   .home-cover { padding-bottom: 24px; }
   .cover-title { transform: none; margin-top: 0; padding-top: 6px; }
-  .cover-arc { height: 36mm; }
+  .cover-arc { height: 30mm; max-width: 85%; }
   .family-script { font-size: 48px; }
   .cover-suffix { font-size: 22px; letter-spacing: 0.12em; margin-top: 4mm; }
   .cover-tagline { font-size: 14px; }
@@ -353,4 +353,4 @@ a:hover { border-bottom-color: var(--ink); }
 .heart-glyph { display: inline-block; width: 1em; height: 0.92em; vertical-align: -0.15em; color: var(--ink); }
 .heart-rule .heart-glyph { width: 24px; height: 22px; }
 .site-nav-brand .heart-glyph { width: 11px; height: 10px; color: var(--ink-soft); }
-.page-footer .heart-glyph { width: 14px; height: 13px; color: var(--ink-soft); }
+.page-footer .heart-glyph { width: 14px; height: 13px; color: var
