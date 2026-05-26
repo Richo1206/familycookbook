@@ -1,14 +1,20 @@
-# Working / source files - not part of the published site
-Examples/
-Graphics/
-Logo.png
-Logo*.png
-favicon.png
-favicon-source*
-font-preview.html
-ChatGPT*
+# Working / source files in repo root - not part of the published site
+# (these are anchored with a leading / so only the root copies are ignored,
+# not the processed copies under assets/)
+/Examples/
+/Graphics/
+/Logo.png
+/Logo*.png
+/favicon.png
+/favicon-source*
+/font-preview.html
+/ChatGPT*
+/logo-source*
+/logo-preview*
+/family-preview*
+/new-family-photo-source*
 
-# iCloud / OS junk
+# OS junk
 .DS_Store
 Thumbs.db
 desktop.ini
