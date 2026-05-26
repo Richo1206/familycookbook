@@ -199,7 +199,7 @@ a:hover { border-bottom-color: var(--ink); }
   margin-top: 2mm;
   align-items: start;
 }
-.recipe-grid-bottom { margin-top: 10mm; }
+.recipe-grid-bottom { margin-top: 5mm; }
 .recipe-grid > section, .recipe-grid > .recipe-photo, .recipe-grid > .notes-panel { min-width: 0; max-width: 100%; }
 
 /* Ingredients table */
@@ -352,4 +352,4 @@ a:hover { border-bottom-color: var(--ink); }
 .heart-glyph { display: inline-block; width: 1em; height: 0.92em; vertical-align: -0.15em; color: var(--ink); }
 .heart-rule .heart-glyph { width: 24px; height: 22px; }
 .site-nav-brand .heart-glyph { width: 11px; height: 10px; color: var(--ink-soft); }
-.page-foot
+.page-foote
